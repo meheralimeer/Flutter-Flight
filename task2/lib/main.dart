@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
-import 'screens/recipe_detail_screen.dart';
-import 'utils/sample_data.dart';
-import 'utils/constants.dart';
+import 'screens/login_screen.dart';
 
 void main() {
-  runApp(const CookBookApp());
+  runApp(const MyApp());
 }
 
-class CookBookApp extends StatelessWidget {
-  const CookBookApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CookBook',
+      title: 'Flutter Authentication',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
+        primarySwatch: Colors.orange,
         useMaterial3: true,
       ),
-      home: RecipeDetailScreen(recipe: kSampleRecipes[0]),
+      home: const LoginScreen(),
     );
   }
 }
